@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e60991d-572c-4e85-83d9-c0d49d187e3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cores/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cores/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorGeneric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/UserHomePO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/user/UserHomePO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/UserLoginPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/user/UserLoginPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/UserRegisterPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/user/UserRegisterPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUIs/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUIs/BasePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUIs/UserHomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUIs/user/UserHomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUIs/UserLoginPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUIs/user/UserLoginPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUIs/UserRegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUIs/user/UserRegisterPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/opencart/user/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opencart/user/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/opencart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/opencart.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "adamjuly2107"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/adamjuly2107/opencart-maven-framework-02",
+    "accountId": "f0379aa9-09f3-416a-ae5e-75b40589dbaa"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3En5MGEhOASibSFMFLMRQzy5O9Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.D:/Java Selenium Course/03 - Automation Framework/opencart-maven-framework-02/src/test/resources/opencart.xml.executor": "Run",
+    "TestNG.UserRegister.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.D:/Java Selenium Course/03 - Automation Framework/opencart-maven-framework-02/src/test/resources/opencart.xml">
+    <configuration name="D:/Java Selenium Course/03 - Automation Framework/opencart-maven-framework-02/src/test/resources/opencart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="opencart-maven-framework-02" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/opencart.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegister" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="opencart-maven-framework-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.opencart.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.opencart.user" />
+      <option name="MAIN_CLASS_NAME" value="com.opencart.user.UserRegister" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/Java Selenium Course/03 - Automation Framework/opencart-maven-framework-02/src/test/resources/opencart.xml" />
+        <item itemvalue="TestNG.UserRegister" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e60991d-572c-4e85-83d9-c0d49d187e3b" name="Changes" comment="" />
+      <created>1780801442726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780801442726</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

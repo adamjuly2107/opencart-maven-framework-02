@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.user;
 
 public class UserLoginPageUI {
     public static final String CONTINUE_BUTTON = "//h2[text()='New Customer']/following-sibling::div/a[text()='Continue']";

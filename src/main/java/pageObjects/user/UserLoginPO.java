@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.user;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v143.page.Page;
-import pageUIs.UserLoginPageUI;
+import pageObjects.PageGenerator;
+import pageUIs.user.UserLoginPageUI;
 
 public class UserLoginPO extends BasePage {
     WebDriver driver;
@@ -15,7 +15,7 @@ public class UserLoginPO extends BasePage {
     public UserRegisterPO clickToContinueButton() {
         waitForElementClickable(driver, UserLoginPageUI.CONTINUE_BUTTON);
         clickToElement(driver, UserLoginPageUI.CONTINUE_BUTTON);
-        return PageGeneratorGeneric.getPage(UserRegisterPO.class, driver);
+        return PageGenerator.getPage(UserRegisterPO.class, driver);
     }
 
     public void enterEmailTextbox(String userEmail) {
@@ -28,8 +28,9 @@ public class UserLoginPO extends BasePage {
         sendKeyToElement(driver, UserLoginPageUI.PASSWORD_TEXTBOX, userPassword);
     }
 
-    public void clickToLoginButton() {
+    public UserHomePO clickToLoginButton() {
         waitForElementClickable(driver, UserLoginPageUI.LOGIN_BUTTON);
         clickToElement(driver, UserLoginPageUI.LOGIN_BUTTON);
+        return PageGenerator.getPage(UserHomePO.class, driver);
     }
 }

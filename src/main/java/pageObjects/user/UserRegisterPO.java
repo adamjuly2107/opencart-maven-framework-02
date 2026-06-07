@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.user;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.UserHomePageUI;
-import pageUIs.UserRegisterPageUI;
+import pageObjects.PageGenerator;
+import pageUIs.user.UserRegisterPageUI;
 
 public class UserRegisterPO extends BasePage {
     private WebDriver driver;
@@ -40,12 +40,11 @@ public class UserRegisterPO extends BasePage {
     public UserHomePO clickToContinueButton() {
         waitForElementClickable(driver, UserRegisterPageUI.CONTINUE_BUTTON);
         clickToElement(driver, UserRegisterPageUI.CONTINUE_BUTTON);
-        return PageGeneratorGeneric.getPage(UserHomePO.class, driver);
+        return PageGenerator.getPage(UserHomePO.class, driver);
     }
 
-    public UserHomePO clickToLogoutMenu() {
-        waitForElementClickable(driver, UserHomePageUI.LOGOUT_MENU);
-        clickToElement(driver, UserHomePageUI.LOGOUT_MENU);
-        return PageGeneratorGeneric.getPage(UserHomePO.class, driver);
+    public boolean isSuccessfulMessageDisplayed() {
+        waitForElementVisible(driver, UserRegisterPageUI.SUCCESSFUL_MESSAGE);
+        return isElementDisplayed(driver, UserRegisterPageUI.SUCCESSFUL_MESSAGE);
     }
 }

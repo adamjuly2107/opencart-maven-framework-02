@@ -6,10 +6,11 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.PageGeneratorGeneric;
-import pageObjects.UserLoginPO;
+import pageObjects.PageGenerator;
+import pageObjects.admin.AdminLoginPO;
+import pageObjects.admin.CustomersPO;
+import pageObjects.user.UserLoginPO;
 import pageUIs.BasePageUI;
-import pageUIs.UserHomePageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -311,14 +312,55 @@ public class BasePage {
                 .until(ExpectedConditions.alertIsPresent());
     }
 
-    // Footer Function
+    // User Site
     public UserLoginPO clickToFooterMyAccountLink(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.FOOTER_MY_ACCOUNT_LINK);
-        scrollToBottomPage(driver);
         clickToElement(driver, BasePageUI.FOOTER_MY_ACCOUNT_LINK);
-        return PageGeneratorGeneric.getPage(UserLoginPO.class, driver);
+        return PageGenerator.getPage(UserLoginPO.class, driver);
+    }
+
+    public void clickToLogoutAtUserSite(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_MENU);
+        clickToElement(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_MENU);
+        waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_ITEM);
+        clickToElement(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_ITEM);
+    }
+
+    public UserLoginPO clickToLoginAtUserSite(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_MENU);
+        clickToElement(driver, BasePageUI.MY_ACCOUNT_DROPDOWN_MENU);
+        waitForElementClickable(driver, BasePageUI.LOGIN_DROPDOWN_ITEM);
+        clickToElement(driver, BasePageUI.LOGIN_DROPDOWN_ITEM);
+        return PageGenerator.getPage(UserLoginPO.class, driver);
+    }
+
+    // Admin Site
+    public CustomersPO openCustomersPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.CUSTOMERS_DROPDOWN_MENU);
+        clickToElement(driver, BasePageUI.CUSTOMERS_DROPDOWN_MENU);
+        waitForElementClickable(driver, BasePageUI.CUSTOMERS_DROPDOWN_ITEM);
+        clickToElement(driver, BasePageUI.CUSTOMERS_DROPDOWN_ITEM);
+        return PageGenerator.getPage(CustomersPO.class, driver);
+    }
+
+    public AdminLoginPO clickToLogoutAtAdminSite(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.LOGOUT_BUTTON);
+        clickToElement(driver, BasePageUI.LOGOUT_BUTTON);
+        return PageGenerator.getPage(AdminLoginPO.class, driver);
+    }
+
+    // Common
+    public void openAdminSiteUrl(WebDriver driver, String adminUrl) {
+        openPageUrl(driver, adminUrl);
+    }
+
+    public void openUserSiteUrl(WebDriver driver, String userUrl) {
+        openPageUrl(driver, userUrl);
     }
 
     private static final int LONG_TIMEOUT = 30;
     private static final int SHORT_TIMEOUT = 2;
+
+
+
 }
