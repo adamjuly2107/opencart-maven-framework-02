@@ -123,6 +123,35 @@ public class BasePage {
         return By.xpath(locator);
     }
 
+    private By getByLocator(String locator) {
+        if(locator == null || locator.trim().isEmpty()) {
+            throw new IllegalArgumentException("Locator cannot be null or empty.");
+        }
+
+        String[] locatorArr = locator.split("=", 2);
+        String locatorType = locatorArr[0].trim();
+        String locatorValue = locatorArr[1].trim();
+
+        switch (locatorType.toUpperCase()) {
+            case "ID":
+                return By.id(locatorValue);
+            case "CLASS":
+                return By.className(locatorValue);
+            case "NAME":
+                return By.name(locatorValue);
+            case "CSS":
+                return By.cssSelector(locatorValue);
+            case "XPATH":
+                return By.xpath(locatorValue);
+            default:
+                throw new IllegalArgumentException("Locator type is not supported: " + locatorType);
+        }
+    }
+
+    private String castParameter(String locator, String... values) {
+        return String.format(locator, (Object[]) values);
+    }
+
     private WebElement getElement(WebDriver driver, String locator) {
         return driver.findElement(getByXpath(locator));
     }
