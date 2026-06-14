@@ -1,4 +1,4 @@
-package pageUIs.admin;
+package pageUIs.opencart.admin;
 
 public class DashboardPageUI {
 }

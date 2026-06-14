@@ -1,8 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="OrangeHRM Automation Testing" verbose="1" >
-    <parameter name="userUrl" value="http://localhost/opencart/"/>
-    <parameter name="adminUrl" value="http://localhost/opencart/adminadamjuly/"/>
+    <parameter name="appUrl" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
 
 <!--    <test name="Run on Edge" >-->
 <!--        <parameter name="browser" value="Edge"/>-->
@@ -14,7 +13,7 @@
     <test name="Run on Firefox" >
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.opencart.user.UserRegister" />
+            <class name="com.orangehrm.AddEmployee" />
         </classes>
     </test>
 

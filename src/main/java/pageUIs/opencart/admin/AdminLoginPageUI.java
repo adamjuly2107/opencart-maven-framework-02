@@ -1,4 +1,4 @@
-package pageUIs.admin;
+package pageUIs.opencart.admin;
 
 public class AdminLoginPageUI {
     public static final String USER_NAME_TEXTBOX = "//input[@name='username']";

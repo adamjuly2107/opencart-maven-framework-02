@@ -1,8 +1,8 @@
-package pageObjects.admin;
+package pageObjects.opencart.admin;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.admin.CustomersPageUI;
+import pageUIs.opencart.admin.CustomersPageUI;
 
 public class CustomersPO extends BasePage {
     private WebDriver driver;

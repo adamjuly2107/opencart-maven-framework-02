@@ -1,9 +1,9 @@
-package pageObjects.user;
+package pageObjects.opencart.user;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageObjects.PageGenerator;
-import pageUIs.user.UserRegisterPageUI;
+import pageUIs.opencart.user.UserRegisterPageUI;
 
 public class UserRegisterPO extends BasePage {
     private WebDriver driver;

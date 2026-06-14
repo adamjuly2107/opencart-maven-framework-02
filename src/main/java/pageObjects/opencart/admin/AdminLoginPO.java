@@ -1,9 +1,9 @@
-package pageObjects.admin;
+package pageObjects.opencart.admin;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageObjects.PageGenerator;
-import pageUIs.admin.AdminLoginPageUI;
+import pageUIs.opencart.admin.AdminLoginPageUI;
 
 public class AdminLoginPO extends BasePage {
     private WebDriver driver;

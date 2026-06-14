@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.opencart;
 
 public class BasePageUI {
     // User Site

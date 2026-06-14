@@ -1,4 +1,4 @@
-package pageObjects.admin;
+package pageObjects.opencart.admin;
 
 import cores.BasePage;
 import org.openqa.selenium.WebDriver;

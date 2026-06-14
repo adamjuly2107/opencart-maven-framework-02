@@ -7,12 +7,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
-import pageObjects.admin.AdminLoginPO;
-import pageObjects.admin.CustomersPO;
-import pageObjects.admin.DashboardPO;
-import pageObjects.user.UserHomePO;
-import pageObjects.user.UserLoginPO;
-import pageObjects.user.UserRegisterPO;
+import pageObjects.opencart.admin.AdminLoginPO;
+import pageObjects.opencart.admin.CustomersPO;
+import pageObjects.opencart.admin.DashboardPO;
+import pageObjects.opencart.user.UserHomePO;
+import pageObjects.opencart.user.UserLoginPO;
+import pageObjects.opencart.user.UserRegisterPO;
 
 public class UserRegister extends BaseTest {
     WebDriver driver;
@@ -25,10 +25,10 @@ public class UserRegister extends BaseTest {
 
         userFirstName = "Adam";
         userLastName = "July";
-        userEmail = "adamjuly00005@gmail.com";
+        userEmail = "adamjuly00014@gmail.com";
         userPassword = "Abcd1234!";
-        adminUsername = "admin";
-        adminPassword = "Abcd1234!";
+        adminUsername = "adamjuly";
+        adminPassword = "Zhugeliang2107!";
 
         driver = getWebDriver(browserName, userUrl);
         userHomePage = PageGenerator.getPage(UserHomePO.class, driver);

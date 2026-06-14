@@ -7,10 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.PageGenerator;
-import pageObjects.admin.AdminLoginPO;
-import pageObjects.admin.CustomersPO;
-import pageObjects.user.UserLoginPO;
-import pageUIs.BasePageUI;
+import pageObjects.opencart.admin.AdminLoginPO;
+import pageObjects.opencart.admin.CustomersPO;
+import pageObjects.opencart.user.UserLoginPO;
+import pageObjects.orangehrm.PIMModule.EmployeeListPO;
+import pageUIs.opencart.BasePageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -153,15 +154,19 @@ public class BasePage {
     }
 
     private WebElement getElement(WebDriver driver, String locator) {
-        return driver.findElement(getByXpath(locator));
+        return driver.findElement(getByLocator(locator));
     }
 
     private List<WebElement> getListElement(WebDriver driver, String locator) {
-        return driver.findElements(getByXpath(locator));
+        return driver.findElements(getByLocator(locator));
     }
 
     protected void clickToElement(WebDriver driver, String locator) {
         getElement(driver, locator).click();
+    }
+
+    protected void clickToElement(WebDriver driver, String locator, String... restValues) {
+        getElement(driver, castParameter(locator, restValues)).click();
     }
 
     protected void sendKeyToElement(WebDriver driver, String locator, String keyToSend) {
@@ -298,17 +303,17 @@ public class BasePage {
     // Wait
     protected void waitForElementVisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+                .until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
 
     protected void waitForListElementVisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(locator)));
     }
 
     protected void waitForElementInvisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+                .until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
     }
 
     protected void waitForListElementInvisible(WebDriver driver, String locator) {
@@ -318,22 +323,27 @@ public class BasePage {
 
     protected void waitForElementPresence(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.presenceOfElementLocated(getByXpath(locator)));
+                .until(ExpectedConditions.presenceOfElementLocated(getByLocator(locator)));
     }
 
     protected void waitForListElementPresence(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(locator)));
+                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(locator)));
     }
 
     protected void waitForElementSelected(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.elementToBeSelected(getByXpath(locator)));
+                .until(ExpectedConditions.elementToBeSelected(getByLocator(locator)));
     }
 
     protected void waitForElementClickable(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
-                .until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+                .until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
+    }
+
+    protected void waitForElementClickable(WebDriver driver, String locator, String... restValues) {
+        new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT))
+                .until(ExpectedConditions.elementToBeClickable(getByLocator(castParameter(locator, restValues))));
     }
 
     private Alert waitAlertPresence(WebDriver driver) {
@@ -341,6 +351,7 @@ public class BasePage {
                 .until(ExpectedConditions.alertIsPresent());
     }
 
+    // OPENCART
     // User Site
     public UserLoginPO clickToFooterMyAccountLink(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.FOOTER_MY_ACCOUNT_LINK);
@@ -378,7 +389,7 @@ public class BasePage {
         return PageGenerator.getPage(AdminLoginPO.class, driver);
     }
 
-    // Common
+    // Common Opencart
     public void openAdminSiteUrl(WebDriver driver, String adminUrl) {
         openPageUrl(driver, adminUrl);
     }
@@ -387,9 +398,18 @@ public class BasePage {
         openPageUrl(driver, userUrl);
     }
 
+    // ORANGEHRM
+    public void waitForAllLoadingSpinnerDisappeared(WebDriver driver) {
+        waitForListElementInvisible(driver, pageUIs.orangehrm.BasePageUI.LOADING_SPINNER);
+    }
+
+    public void clickToMainMenuModuleByName(WebDriver driver, String moduleName) {
+        waitForElementClickable(driver, pageUIs.orangehrm.BasePageUI.DYNAMIC_MAIN_MENU_ITEM_BY_NAME, moduleName);
+        clickToElement(driver, pageUIs.orangehrm.BasePageUI.DYNAMIC_MAIN_MENU_ITEM_BY_NAME, moduleName);
+    }
+
     private static final int LONG_TIMEOUT = 30;
     private static final int SHORT_TIMEOUT = 2;
-
 
 
 }
